@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC   
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+     "http://struts.apache.org/dtds/struts-2.0.dtd">
+     
+     
+<struts>
+    <package name="liu" extends="struts-default">
+        <global-results>
+            <result name="succeed">/common/succeed.jsp</result>
+            <result name="successAdd">/common/add_success.jsp</result>
+            <result name="successDel">/common/del_success.jsp</result>
+            <result name="successUpdate">/common/update_success.jsp</result>
+        </global-results>
+        
+        
+        <action name="upload" class="com.util.upload" method="upload">
+             <result name="success">/upload/upload_re.jsp</result>
+             
+        </action>
+        
+        <!-- 前台 -->
+        <action name="index" class="indexAction" method="index">
+            <result name="success">/qiantai/index.jsp</result>
+        </action>
+         
+        
+        
+        <action name="userReg" class="userAction" method="userReg">
+        </action>
+        <action name="userEdit" class="userAction" method="userEdit">
+        </action>
+        <action name="userLogin" class="userAction" method="userLogin">
+        </action>
+        <action name="userLogout" class="userAction" method="userLogout">
+             <result name="success">/qiantai/default.jsp</result>
+        </action>
+        <action name="userDel" class="userAction" method="userDel">
+        </action>
+        <action name="userMana" class="userAction" method="userMana">
+             <result name="success">/admin/user/userMana.jsp</result>
+        </action>
+        <action name="userXinxi" class="userAction" method="userXinxi">
+             <result name="success">/common/userinfo.jsp</result>
+        </action>
+        
+        
+        
+         
+        
+        <action name="adminAdd" class="adminAction" method="adminAdd">
+        </action>
+        <action name="adminDel" class="adminAction" method="adminDel">
+        </action>
+        <action name="adminManage" class="adminAction" method="adminManage">
+            <result name="success">/admin/index/adminManage.jsp</result>
+        </action>
+        
+        
+        
+        <!--留言-->
+        <action name="liuyanMana" class="liuyanAction" method="liuyanMana">
+             <result name="success">/admin/liuyan/liuyanMana.jsp</result>
+        </action>
+        <action name="liuyanAdd" class="liuyanAction" method="liuyanAdd">
+        </action>
+        <action name="liuyanDel" class="liuyanAction" method="liuyanDel">
+        </action>
+        <action name="liuyanAll" class="liuyanAction" method="liuyanAll">
+             <result name="success">/qiantai/liuyan/liuyanAll.jsp</result>
+        </action>
+        
+        <!-- 公告 -->
+        <action name="gonggaoAdd" class="gonggaoAction" method="gonggaoAdd">
+        </action>
+        <action name="gonggaoDel" class="gonggaoAction" method="gonggaoDel">
+        </action>
+        <action name="gonggaoMana" class="gonggaoAction" method="gonggaoMana">
+            <result>/admin/gonggao/gonggaoMana.jsp</result>
+        </action>
+        <action name="gonggaoDetail" class="gonggaoAction" method="gonggaoDetail">
+            <result>/admin/gonggao/gonggaoDetail.jsp</result>
+        </action>
+        <action name="gonggaoDetailQian" class="gonggaoAction" method="gonggaoDetailQian">
+            <result>/qiantai/gonggao/gonggaoDetailQian.jsp</result>
+        </action>
+        <action name="gonggaoQian5" class="gonggaoAction" method="gonggaoQian5">
+            <result>/qiantai/gonggao/gonggaoQian5.jsp</result>
+        </action>
+        
+        <action name="catelogMana" class="catelogAction" method="catelogMana">
+             <result name="success">/admin/catelog/catelogMana.jsp</result>
+        </action>
+        <action name="catelogAdd" class="catelogAction" method="catelogAdd">
+        </action>
+        <action name="catelogDel" class="catelogAction" method="catelogDel">
+        </action>
+        
+        
+        <action name="goodsAddByMe" class="goodsAction" method="goodsAddByMe">
+        </action>
+        <action name="goodsDelByMe" class="goodsAction" method="goodsDelByMe">
+        </action>
+        <action name="goodsManaByMe" class="goodsAction" method="goodsManaByMe">
+            <result name="success">/auser/goods/goodsManaByMe.jsp</result>
+        </action>
+        <action name="goodsDetailHou" class="goodsAction" method="goodsDetailHou">
+            <result name="success">/auser/goods/goodsDetailHou.jsp</result>
+        </action>
+        <action name="goodsDetailQian" class="goodsAction" method="goodsDetailQian">
+            <result name="success">/qiantai/goods/goodsDetailQian.jsp</result>
+        </action>
+         <action name="goodsDetail" class="goodsAction" method="goodsDetail">
+            <result name="success">/qiantai/goods/goodsDetail.jsp</result>
+        </action>
+        <action name="goodsManaByAd" class="goodsAction" method="goodsManaByAd">
+            <result name="success">/admin/goods/goodsManaByAd.jsp</result>
+        </action>
+        <action name="goodsDelByAd" class="goodsAction" method="goodsDelByAd">
+        </action>
+        <action name="goodSearch" class="goodsAction" method="goodSearch">
+            <result name="success">/qiantai/goods/goodSearch.jsp</result>
+        </action>
+        
+        
+        
+        <action name="jingpaiAdd" class="jingpaiAction" method="jingpaiAdd">
+            <result name="success">/common/msg.jsp</result>
+        </action>
+        <action name="jingpaiByMe" class="jingpaiAction" method="jingpaiByMe">
+             <result name="success">/auser/jingpai/jingpaiByMe.jsp</result>
+        </action>
+        <action name="jingpaikan" class="jingpaiAction" method="jingpaikan">
+             <result name="success">/auser/jingpai/jingpaikan.jsp</result>
+        </action>
+    </package>
+</struts>
